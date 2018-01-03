@@ -1,8 +1,8 @@
 # Site settings
 title: Rhett Newton
 description: 'A website for my projects and whatnot'
-url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno'
+url: 'http://rnewton5.github.io/'
+baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 

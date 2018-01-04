@@ -29,4 +29,4 @@ It was a great experience and a ton of fun. [There's an article about it!](http:
 
 ### Contact
 
-- TODO: finish
+[rhett@rhettnewton.com](mailto:rhett@rhettnewton.com)

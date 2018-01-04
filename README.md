@@ -1,4 +1,4 @@
-#rnewton5.github.io
+# rnewton5.github.io
 
 This is my website which I post my projects, thoughts, and some information for anyone who wants to get to know me better.
 

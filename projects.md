@@ -44,7 +44,7 @@ You can find the source code for it [right here on Github.](https://github.com/r
 
 ![Image of this site's homepage]({{ site.baseurl }}/images/my_homepage.png)
 
-That's right, this site. check out the source code for the site which you are currently viewing [right here on github!]()
+That's right, this site. check out the source code for the site which you are currently viewing [right here on github!](https://github.com/rnewton5/rnewton5.github.io)
 
 This website was written using the static site generator [Jekyll](https://jekyllrb.com/). It makes use of a _very_ slightly modified [jekyll-uno](https://github.com/joshgerdes/jekyll-uno) theme made by [joshgerdes](https://github.com/joshgerdes). 
 

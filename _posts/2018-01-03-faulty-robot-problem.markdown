@@ -1,8 +1,8 @@
 ---
 title:  "Faulty Robot problem"
-date:   2018-01-03 12:27:00
+date:   2018-01-03 12:27:42
 categories: [algorithms]
-tags: [problems, algorithms]
+tags: [algorithms]
 ---
 Recently at the Regional ACM Programming Contest 2017, we were presented with the [Faulty Robot problem](https://open.kattis.com/problems/faultyrobot). Unfortunately by the time we got to the problem there was simply not enough time on the clock to complete it and debug our solution. Because it was such an interesting problem to me, I figured I should revisit it on my own and come up with a solution.
 
@@ -122,3 +122,17 @@ int main() {
 ```
 
 This implementation passes all test cases on the Kattis website.
+
+``` ruby
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+```
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+[jekyll]:      http://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help

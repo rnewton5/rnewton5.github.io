@@ -4,7 +4,7 @@ date:   2018-01-03 12:27:42
 categories: [algorithms]
 tags: [algorithms]
 ---
-Recently at the Regional ACM Programming Contest 2017, we were presented with the [Faulty Robot problem](https://open.kattis.com/problems/faultyrobot). Unfortunately by the time we got to the problem there was simply not enough time on the clock to complete it and debug our solution. Because it was such an interesting problem to me, I figured I should revisit it on my own and come up with a solution.
+At the Regional ACM Programming Contest 2017, we were presented with the [Faulty Robot problem](https://open.kattis.com/problems/faultyrobot). Unfortunately by the time we got to the problem there was simply not enough time on the clock to complete it and debug our solution. Because it was such an interesting problem to me, I figured I should revisit it on my own and come up with a solution.
 
 You can find all the provided information on [open.kattis.com](https://open.kattis.com/problems/faultyrobot), but in a nutshell the problem is that someone has programmed a robot to explore a graph containing *n* nodes. Each node on the graph can only have at most one forced move away from it going to a neighboring node. However, the robot has some bugs in its code. It may bug out and move to a randomly chosen neighboring node at any time, but such an occurrence can happen at most once during the robots operation, and might not happen at all. If the robot reaches a node that has no forced moves away from it we consider that node to be a stopping point because unless the robot bugs out, there is no way to continue. We need to somehow figure out how many possible stopping points are located on any provided graph.
 
@@ -19,7 +19,7 @@ Using this information we can build a recursive algorithm to traverse the graph 
 * a data structure containing the nodes that have that have been figured out to be possible stopping points
 * an integer to keep track of our current node
 * a boolean to keep track of whether the robot has already bugged out
-* the number of nodes in the list
+* the number of nodes in the graph
 
 the function will run through the following steps:
 
@@ -121,4 +121,4 @@ int main() {
 }
 ```
 
-This implementation passes all test cases on the Kattis website.
+This implementation passes all test cases on the Kattis website. 

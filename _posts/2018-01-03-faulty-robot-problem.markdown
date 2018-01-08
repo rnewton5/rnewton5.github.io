@@ -10,9 +10,23 @@ You can find all the provided information on [open.kattis.com](https://open.katt
 
 ![faulty robot sample problem image]({{ site.baseurl}}/images/faulty_robot_sample.png)
 
-In the above example, red arrows correspond to a forced move away from a node, and black arrows correspond to a buggy move away from a node. The two nodes with red borders are the possible stopping points. Note that node 3 is not a stopping point because getting to it would require two buggy movements which cannot happen in this problem, so node 3 is totally unreachable. Node 6 is unreachable from node 2, but it can still be reached from node 5. So the answer to this example is two.
+In the above example, red arrows correspond to a forced move away from a node, and black arrows correspond to a buggy move away from a node. The two nodes with red borders are the possible stopping points. Note that node 3 is not a stopping point because getting to it would require two buggy movements which cannot happen in this problem, so node 3 is totally unreachable. Node 6 is unreachable from node 2, but it can still be reached from node 5. Node 6 is not a possible stoppint point becuase it has a forced move away from it to node 7, which has no moves away from it at all. So the answer to this example is two.
 
-Using this information we can build a recursive algorithm to traverse the graph and figure out all the possible ending points. The function will need to be provided with a few things:
+Using this information we can build a recursive algorithm to traverse the graph and figure out all the possible ending points. The function will run through the following steps:
+
+1. if the current node has already been visited, simply return without doing anything
+2. place the current node in a data structure containing the visited nodes
+3. we'll start out by assuming this node is a stopping point. We set a boolean called "stoppingPoint" to true
+4. iterate over all of the paths leading away from the current node.
+    * if a path is forced:
+        1. this node is not a stopping point. set "stoppingPoint" to false
+        2. recursively call this function with the new node as the current node
+    * if a path is buggy and the robot has not already bugged out:
+        1. recursively call this function with the new node as the current node, a blank visited nodes data structure, and a boolean indicating that it has already bugged out and so cannot travel down any more bugged paths
+5. remove the current node from the data structure containing the visited nodes
+6. if 'stoppingPoint' is still set to true and this node has not already been added to the data structure containing the possible stopping points, add it to that data structure
+
+The function will need to be provided with a few things:
 
 * the graph (represented as a vector)
 * a data structure containing the nodes already visited (to prevent us from infinitly traversing a circuit)
@@ -21,35 +35,24 @@ Using this information we can build a recursive algorithm to traverse the graph 
 * a boolean to keep track of whether the robot has already bugged out
 * the number of nodes in the graph
 
-the function will run through the following steps:
-
-1. if the current node has already been visited, simply return without doing anything
-2. place the current node in the data structure containing the visited nodes
-3. we'll start out by assuming this node is a stopping point. We set a boolean called "stoppingPoint" to true
-4. iterate over all of the current node's paths.
-    * if a path is forced:
-        1. this node is not a stopping point. set "stoppingPoint" to false
-        2. recursively call this function with the new node as the current node
-    * if a path is buggy:
-        1. recursively call this function with the new node as the current node, and a blank visited nodes data structure
-5. remove the current node from the data structure containing the visited nodes
-6. if 'stoppingPoint' is still set to true and this node has not already been added to the data structure containing the possible stopping points, add it to that data structure
-
-For some bizarre reason we chose to use C++ at the competition, so I decided to use it here as well.
+We chose to use C++ at the competition, so I decided to use it here as well.
 
 ```c++
 void solveFaultyRobot(std::vector<int>& graph, std::vector<int>& visitedNodes, std::vector<int>& stoppingPoints, int currentNode, bool bugged, int numNodes) {
+
   // if visitedNodes contains the value of the current node, return without doing anything
   if (std::find(visitedNodes.begin(), visitedNodes.end(), currentNode) != visitedNodes.end()) {
     return;
   }
-  
+
   // push the current node onto the back of the visitedNodes
   visitedNodes.push_back(currentNode);
 
-  // stoppingPoint gets set to false if no forced paths are found.
+  // We start by assuming this node is a stopping point, if a forced path
+  // is found going away from this node, we set it to false.
   bool isStoppingPoint = true;
-  // search through all of the possible paths and add up the results of the recursive calls
+
+  // The robot goes down every single possible path
   for (int i = 0; i < numNodes; ++i) {
     // get the value stored at the location in the graph
     int value = graph[numNodes * currentNode + i];
@@ -66,11 +69,11 @@ void solveFaultyRobot(std::vector<int>& graph, std::vector<int>& visitedNodes, s
     }
   }
 
-  // remove this node from the list of visited nodes
+  // remove this node from visitedNodes
   visitedNodes.pop_back();
-
-  // if the stoppingPoint flag was never set to false we add this node to the list of stopping points if it hasn't already been added
+  
   if (isStoppingPoint) {
+    // if stoppintPoints doesn't already contain this node, we add this node to stoppintPoints
     if (std::find(stoppingPoints.begin(), stoppingPoints.end(), currentNode) == stoppingPoints.end()) {
       stoppingPoints.push_back(currentNode);
     }
@@ -92,7 +95,7 @@ int main() {
   // creating the graph and initializing
   // all values to 0
   graph = std::vector<int>(n * n, 0);
-  
+
   // getting all of the edges for the graph
   // a forced path is indicated by a -1,
   // a buggy path is indicated by a 1
@@ -108,15 +111,17 @@ int main() {
   }
 
   // now that the graph is filled, we call the 
-  // 'solveFaultyRobot' recursive function
+  // 'solveFaultyRobot' function
   std::vector<int> visitedNodes = std::vector<int>();
   std::vector<int> stoppingPoints = std::vector<int>();
   solveFaultyRobot(graph, visitedNodes, stoppingPoints, 0, false, n);
 
   // the stoppingPoints vector now contains all the nodes that are
   // possible stopping points. We just output its size.
-  std::cout << stoppingPoints.size() << std::endl;;
+  std::cout << stoppingPoints.size() << std::endl;
 
+  std::cin.ignore();
+  std::cin.get();
   return 0;
 }
 ```

@@ -8,9 +8,9 @@ permalink: /about/
 
 ### Small biography
 
-I've lived in Clarksville, TN most of my life, I'm currently working towards getting my bachelors degree in Computer Science at Austin Peay State University, and I just recently celebrated two years of marriage to my wonderful wife. 
+I've lived in Clarksville, TN most of my life, I'm currently working towards getting my bachelors degree in Computer Science at Austin Peay State University, I'm an avid player of classic video games, and I've been married for just over two years.
 
-I'm pretty much addicted to my computer. Between homework and personal projects I probably spend close to 90% of my spare time at it. 
+I'm interested in both software development and web development, and I'd like to pursue a carreer in either field. 
 
 In addition to being a student, I currently serve in the United States Army Reserves as a [Horizontal Contruction Engineer.](https://www.goarmy.com/careers-and-jobs/browse-career-and-job-categories/construction-engineering/construction-equipment-operator.html) 
 

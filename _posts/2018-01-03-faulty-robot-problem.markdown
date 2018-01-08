@@ -85,6 +85,7 @@ And the driver program:
 
 ```c++
 int main() {
+  // Single letter variables chosen to match kattis website
   int n, m, a, b;
   std::vector<int> graph;
 

@@ -24,6 +24,17 @@ The code follows the MVC pattern and uses;
 [Or check it out in action.](https://barkerapp.azurewebsites.net)
 
 ---
+### dmc-portfolio
+
+![scp with and without custom css]({{ site.baseurl }}/images/dmc-portfolio.png)
+
+A website I made for someone to host their video portfolio.
+
+It was made with React and Node.js.
+
+[Check it out here!](http://dmc-portfolio.s3-website.us-east-2.amazonaws.com/)
+
+---
 ### SCP Viewing Enhancer
 
 ![scp with and without custom css]({{ site.baseurl }}/images/scp_transform.png)

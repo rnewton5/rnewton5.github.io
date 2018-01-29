@@ -34,6 +34,8 @@ It was made with React and Node.js.
 
 [Check it out here!](http://dmc-portfolio.s3-website.us-east-2.amazonaws.com/)
 
+[On Github](https://github.com/rnewton5/dmc-portfolio)
+
 ---
 ### SCP Viewing Enhancer
 

@@ -47,11 +47,6 @@ Git • jQuery • Ajax • Linux • Visual Studio • Android Studio |
 - check out [my projects page]({{ site.baseurl }}/projects/)
 - find more projects on [my github](https://github.com/rnewton5)
 
-### Programming competition
-
-Recently, on November 4th 2017, I got to participate in the Regional ACM Programming Contest 2017.
-It was a great experience and a ton of fun. [There's an article about it!](http://www.apsu.edu/news/November-2017-computer-sci-students.php)
-
 ### Contact
 
 [rhett@rhettnewton.com](mailto:rhett@rhettnewton.com)

@@ -6,16 +6,41 @@ comments : true
 permalink: /about/
 ---
 
-### Small biography
+### Education
 
-I've lived in Clarksville, TN most of my life, I'm currently working towards getting my bachelors degree in Computer Science at Austin Peay State University, I'm an avid player of classic video games, and I've been married for just over two years.
+**Austin Peay State University** \| Clarksville TN  
+Graduation Date: May 4th, 2018  
+Major GPA: 3.58/4.0
 
-I'm interested in both software development and web development, and I'd like to pursue a carreer in either field. 
+Major: *Computer Science and Information Technology*  
+Concentration: *Computer Science*  
+Minor: *Mathematics*  
 
-In addition to being a student, I currently serve in the United States Army Reserves as a [Horizontal Contruction Engineer.](https://www.goarmy.com/careers-and-jobs/browse-career-and-job-categories/construction-engineering/construction-equipment-operator.html) 
+### Acomplishments
 
+ - **Dean's List**
+   - Fall 2016
+   - Fall 2017
+ - [Pi Mu Epsilon](http://pme-math.org/)
 
-Fun fact: I joined the Army Reserves in 2012, was deployed for all of 2014, got married in 2016, and will graduate college in 2018. So I guess all of my major life events happen during even numbered years. :)
+### Technical Skills
+
+Languages |
+-|-
+C# • Java • C++ • Python • Ruby • JavaScript • HTML • CSS • Node.js • SQL |
+
+Frameworks|
+-|-
+ASP.NET • Rails • WPF • ReactJS • Bootstrap |
+
+Database|
+-|-
+Microsoft SQL Server • PostgreSQL |
+
+Misc|
+-|-
+Git • jQuery • Ajax • Linux • Visual Studio • Android Studio |
+
 
 ### Projects
 

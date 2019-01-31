@@ -1,26 +1,25 @@
 # Site settings
 title: Rhett Newton
-description: 'A website for my projects and whatnot'
-url: 'http://rnewton5.github.io/'
-baseurl: ''
+description: "A website for my projects and whatnot"
+url: "http://rnewton5.github.io/"
+baseurl: ""
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
 author:
-  name: 'Rhett Newton'
+  name: "Rhett Newton"
   email: rhett@rhettnewton.com
-  twitter_username: 
-  facebook_username: 
-  github_username:  rnewton5
-  linkedin_username:  rhett-newton
+  twitter_username:
+  facebook_username:
+  github_username: rnewton5
+  linkedin_username: rhett-newton
 
 defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
+  - scope:
+      path: ""
+      type: "posts"
     values:
-        layout: 'post'
+      layout: "post"
 
 # Build settings
 destination: _site
@@ -30,8 +29,8 @@ markdown: kramdown
 highlighter: rouge
 
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 
 kramdown:
   # use Github Flavored Markdown
@@ -39,5 +38,5 @@ kramdown:
   # do not replace newlines by <br>s
   hard_wrap: false
 
-gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+gems: ["jekyll-paginate"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "screenshot.png"]

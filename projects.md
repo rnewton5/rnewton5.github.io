@@ -1,8 +1,8 @@
 ---
-layout   : page
-title    : Some of my projects
-date     : 2016-09-15 22:00
-comments : true
+layout: page
+title: Some of my projects
+date: 2016-09-15 22:00
+comments: true
 permalink: /projects/
 ---
 
@@ -21,12 +21,13 @@ The code follows the MVC pattern and uses;
 
 [Check it out on Github.](https://github.com/rnewton5/Barker)
 
-[Or check it out in action.](https://barkerapp.azurewebsites.net)
+<!--[Or check it out in action.](https://barkerapp.azurewebsites.net)-->
 
 ---
+
 ### dmc-portfolio
 
-![scp with and without custom css]({{ site.baseurl }}/images/dmc-portfolio.png)
+![Video Portfolio Website]({{ site.baseurl }}/images/dmc-portfolio.png)
 
 A website I made for someone to host their video portfolio.
 
@@ -37,6 +38,19 @@ It was made with React and Node.js.
 [On Github](https://github.com/rnewton5/dmc-portfolio)
 
 ---
+
+### NES Emulator
+
+![NES]({{ site.baseurl }}/images/nes.jpg)
+
+Still a work in progress, but I'm proud of it so far.
+
+Figured I would post the source code.
+
+[Github](https://github.com/rnewton5/nes_emulator)
+
+---
+
 ### SCP Viewing Enhancer
 
 ![scp with and without custom css]({{ site.baseurl }}/images/scp_transform.png)
@@ -50,26 +64,28 @@ You can download it for
 - [Chrome](https://chrome.google.com/webstore/detail/scp-viewing-enhancer/pmpbaplainkmncifmdhhmkdafmlmkgdk?utm_source=chrome-app-launcher-info-dialog)
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/scp_viewing_enhancer/)
 
-You can find the source code for it [right here on Github.](https://github.com/rnewton5/SCP-viewing-enhancer)
-
 ---
+
 ### This site
 
 ![Image of this site's homepage]({{ site.baseurl }}/images/my_homepage.png)
 
 That's right, this site. check out the source code for the site which you are currently viewing [right here on github!](https://github.com/rnewton5/rnewton5.github.io)
 
-This website was written using the static site generator [Jekyll](https://jekyllrb.com/). It makes use of a _very_ slightly modified [jekyll-uno](https://github.com/joshgerdes/jekyll-uno) theme made by [joshgerdes](https://github.com/joshgerdes). 
+This website was written using the static site generator [Jekyll](https://jekyllrb.com/). It makes use of a _very_ slightly modified [jekyll-uno](https://github.com/joshgerdes/jekyll-uno) theme made by [joshgerdes](https://github.com/joshgerdes).
 
 ---
+
 ### Mastermind Board Game
 
 ![Mastermind in terminal]({{ site.baseurl }}/images/mastermind.png)
 
-Written in Ruby, this version of [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)) plays in your terminal and features a fully functional cpu oponent. The cpu openent uses the [Five-guess algorithm](https://en.wikipedia.org/wiki/Mastermind_(board_game)#Five-guess_algorithm) to try and guess your code.
+Written in Ruby, this version of [Mastermind](<https://en.wikipedia.org/wiki/Mastermind_(board_game)>) plays in your terminal and features a fully functional cpu oponent. The cpu openent uses the [Five-guess algorithm](<https://en.wikipedia.org/wiki/Mastermind_(board_game)#Five-guess_algorithm>) to try and guess your code.
 
 [Check it out on Github!](https://github.com/rnewton5/Mastermind)
 
 ---
+
 ### More?
+
 [Check out my Github!](http://www.github.com/rnewton5)

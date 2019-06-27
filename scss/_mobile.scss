@@ -1,0 +1,68 @@
+@include mediaXl {
+  .about .about-content {
+    .title,
+    .dates {
+      display: inline-block;
+    }
+
+    .dates {
+      float: right;
+    }
+  }
+}
+
+@include mediaLg {
+}
+
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    .icons {
+      justify-content: center;
+    }
+  }
+
+  .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .about .about-content {
+    grid-template-areas:
+      "heading heading headshot"
+      "bio bio bio"
+      "experience experience experience"
+      "skills skills skills"
+      "education education education";
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .experience {
+      .title,
+      .dates {
+        display: inline-block;
+      }
+
+      .dates {
+        float: right;
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  .about .about-content {
+    grid-gap: 10px;
+    grid-template-areas:
+      "heading"
+      "headshot"
+      "bio"
+      "experience"
+      "skills"
+      "education";
+    grid-template-columns: 1fr;
+  }
+}

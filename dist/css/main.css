@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #333;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(51, 51, 51, 0.6); }
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading,
+  h4.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading,
+  h4.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(56, 56, 56, 0.5); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+.text-secondary {
+  color: #eece1a; }
+
+main {
+  padding: 4rem;
+  height: 100%; }
+  main .icons {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center; }
+    main .icons a {
+      padding: 0.4rem;
+      transition: all 0.5s ease-out; }
+      main .icons a:hover {
+        color: #eece1a; }
+    main .icons .about-btn {
+      display: inline-block;
+      background: rgba(51, 51, 51, 0.8);
+      border: 2px solid #262626;
+      border-radius: 15px;
+      padding: 4px;
+      margin-left: 0.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+      -webkit-user-select: none;
+      /* Chrome all / Safari all */
+      -moz-user-select: none;
+      /* Firefox all */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+      /* Likely future */ }
+      main .icons .about-btn:hover {
+        background: rgba(238, 206, 26, 0.5); }
+      main .icons .about-btn:active {
+        background: rgba(238, 206, 26, 0.8); }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh;
+      transition: all 0.5s ease-out; }
+
+.about {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #eece1a;
+  border-radius: 20px;
+  background: rgba(51, 51, 51, 0.9);
+  opacity: 0;
+  overflow: auto;
+  transition: all 0.5s ease-out; }
+  .about.show {
+    visibility: visible;
+    opacity: 1; }
+  .about .about-exit-btn {
+    position: fixed;
+    border-radius: 50%;
+    border: 3px solid #eece1a;
+    background: #333;
+    top: 5px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.5s ease-out; }
+    .about .about-exit-btn .line {
+      width: 100%;
+      height: 5px;
+      border-radius: 2px;
+      background: white; }
+      .about .about-exit-btn .line:nth-child(1) {
+        transform: translate3d(0, 19px, 0) rotate(45deg); }
+      .about .about-exit-btn .line:nth-child(2) {
+        transform: translate3d(0, 14px, 0) rotate(-45deg); }
+    .about .about-exit-btn:hover {
+      background: #eece1a; }
+  .about .portrait {
+    width: 225px;
+    height: 225px;
+    background: url(../img/portrait.jpg);
+    background-size: cover;
+    border: 3px solid #eece1a;
+    border-radius: 50%; }
+  .about .h1 {
+    line-height: 1; }
+  .about .about-content {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "heading heading heading" "headshot bio bio" "education experience skills";
+    grid-template-columns: 1fr 1.5fr 1.5fr; }
+    .about .about-content h2 {
+      color: #eece1a;
+      text-decoration: underline; }
+    .about .about-content .heading {
+      grid-area: heading; }
+    .about .about-content .portrait {
+      grid-area: headshot;
+      margin: auto;
+      margin-bottom: 50px; }
+    .about .about-content .bio {
+      grid-area: bio;
+      font-size: 1.5rem;
+      padding: 10px;
+      display: flex; }
+    .about .about-content .experience {
+      grid-area: experience; }
+    .about .about-content .skills {
+      grid-area: skills; }
+      .about .about-content .skills table {
+        width: 100%; }
+        .about .about-content .skills table tr {
+          font-size: 1.25rem; }
+        .about .about-content .skills table tr:nth-child(even) {
+          background-color: rgba(238, 206, 26, 0.2); }
+    .about .about-content .education {
+      grid-area: education; }
+    .about .about-content .about-item {
+      background: rgba(51, 51, 51, 0.5);
+      padding: 10px;
+      border-top: 3px solid #404040;
+      border-left: 3px solid #404040;
+      border-right: 3px solid #2b2b2b;
+      border-bottom: 3px solid #2b2b2b;
+      border-radius: 10px;
+      font-size: 1.1rem; }
+
+@media screen and (min-width: 1171px) {
+  .about .about-content .title,
+  .about .about-content .dates {
+    display: inline-block; }
+  .about .about-content .dates {
+    float: right; } }
+
+@media screen and (max-width: 900px) {
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+    main .icons {
+      justify-content: center; }
+  .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem; }
+  .about .about-content {
+    grid-template-areas: "heading heading headshot" "bio bio bio" "experience experience experience" "skills skills skills" "education education education";
+    grid-template-columns: 1fr 1fr 1fr; }
+    .about .about-content .experience .title,
+    .about .about-content .experience .dates {
+      display: inline-block; }
+    .about .about-content .experience .dates {
+      float: right; } }
+
+@media screen and (max-width: 650px) {
+  .about .about-content {
+    grid-gap: 10px;
+    grid-template-areas: "heading" "headshot" "bio" "experience" "skills" "education";
+    grid-template-columns: 1fr; } }

@@ -4,7 +4,8 @@
   "description": "Website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass-watch": "node-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "node-sass scss/ -o dist/css/ --recursive"
   },
   "author": "Rhett Newton",
   "license": "ISC",
